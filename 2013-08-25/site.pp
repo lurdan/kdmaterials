@@ -7,7 +7,6 @@ class {
 
 reprepro::mirror {
   '/var/www/debian':
-    owner => 'www-data', group => 'www-data',
     require => Class['apache2'],
     distributions => 'Codename: wheezy
 Architectures: amd64
