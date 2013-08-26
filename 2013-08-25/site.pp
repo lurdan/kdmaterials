@@ -1,6 +1,6 @@
 class {
   'apache2':
-    version => '2.4.6-3';
+    version => '2.2.22-13';
   'reprepro':;
   'gnupg':;
 }
@@ -42,8 +42,7 @@ class apache2 ( $version = 'latest' ) {
   package { 'apache2':
     ensure => $version;
   }
-
-  service { 'apache2':; }
+  -> service { 'apache2':; }
 }
 
 class reprepro {
